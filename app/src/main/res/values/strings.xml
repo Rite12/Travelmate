@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Travelmate</string>
+    <string name="teman_setia_di_setiap_perjalananmu">Teman Setia Di Setiap Perjalananmu!</string>
+    <string name="travelmate">TRAVELMATE</string>
+    <string name="ver_1_0">VER 1.0</string>
+    <string name="google_login" />
+    <string name="facebook_login" />
+    <string name="apple_login" />
+</resources>
