@@ -1,16 +1,18 @@
 package com.example.travelmate.ui.theme
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.travelmate.MainActivity
 import com.example.travelmate.R
+import com.example.travelmate.ui.theme.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var emailEditText: EditText
@@ -21,10 +23,10 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var googleLoginButton: Button
     private lateinit var facebookLoginButton: Button
     private lateinit var appleLoginButton: Button
-    private lateinit var signUpButton: Button
     private lateinit var sharedPreferences: SharedPreferences
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
@@ -34,9 +36,17 @@ class LoginActivity : AppCompatActivity() {
         rememberMeCheckBox = findViewById(R.id.rememberMeCheckBox)
         loginButton = findViewById(R.id.loginButton)
 
+
         sharedPreferences = getSharedPreferences("loginPrefs", Context.MODE_PRIVATE)
 
         checkLoginStatus()
+
+        val registerTextView = findViewById<TextView>(R.id.textview3)
+        registerTextView.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
 
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
