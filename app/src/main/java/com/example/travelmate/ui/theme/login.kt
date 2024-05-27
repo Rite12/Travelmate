@@ -28,62 +28,68 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
-        // Initialize views
 
         emailEditText = findViewById(R.id.emailEditText)
         passwordEditText = findViewById(R.id.passwordEditText)
-        loginButton = findViewById(R.id.loginButton)
         rememberMeCheckBox = findViewById(R.id.rememberMeCheckBox)
-        forgotPasswordTextView = findViewById(R.id.forgotPasswordTextView)
-        googleLoginButton = findViewById(R.id.googleLoginButton)
-        facebookLoginButton = findViewById(R.id.facebookLoginButton)
-        appleLoginButton = findViewById(R.id.appleLoginButton)
-        signUpButton = findViewById(R.id.textview3)
+        loginButton = findViewById(R.id.loginButton)
 
-        sharedPreferences = getSharedPreferences("login_prefs", Context.MODE_PRIVATE)
-        checkStatusLogin()
+        sharedPreferences = getSharedPreferences("loginPrefs", Context.MODE_PRIVATE)
 
-            loginButton.setOnClickListener {
-                val email= emailEditText.text.toString()
-                val password= passwordEditText.text.toString()
+        checkLoginStatus()
 
-                if (authenticateUser(email, password)) {
-                    if (rememberMeCheckBox.isChecked) {
+        loginButton.setOnClickListener {
+            val email = emailEditText.text.toString()
+            val password = passwordEditText.text.toString()
+
+            if (authenticateUser(email, password)) {
+                if (rememberMeCheckBox.isChecked) {
                     saveLoginDetails(email, password)
+                } else {
+                    clearLoginDetails()
                 }
-                    navigateToHome()
-                    } else {
-                    Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show()
-                }
+                navigateToHome()
+            } else {
+                Toast.makeText(this, "Username atau password salah", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
 
-            }
-
-
-    private fun checkStatusLogin() {
-        val isRemembered = sharedPreferences.getBoolean("isRemembered", false)
-        if (isRemembered){
+    private fun checkLoginStatus() {
+        val isRemembered = sharedPreferences.getBoolean("rememberMe", false)
+        if (isRemembered) {
             val savedEmail = sharedPreferences.getString("email", "")
             val savedPassword = sharedPreferences.getString("password", "")
-            if (authenticateUser(savedEmail,savedPassword)){
+            if (authenticateUser(savedEmail, savedPassword)) {
                 navigateToHome()
             }
         }
- }
-    
-    private fun authenticateUser(email: String, password: String): Boolean {
-    return email == "&&&&@gmail.com" && password == "password"
     }
+
+    private fun authenticateUser(email: String?, password: String?): Boolean {
+        // Replace this with your actual authentication logic
+        return email == "***@gmail.com" && password == "password"
+    }
+
     private fun saveLoginDetails(email: String, password: String) {
-    val editor = sharedPreferences.edit()
-    editor.putBoolean("isRemembered", true)
-    editor.putString("email", email)
-    editor.putString("password", password)
-    editor.apply()
+        val editor = sharedPreferences.edit()
+        editor.putBoolean("rememberMe", true)
+        editor.putString("email", email)
+        editor.putString("password", password)
+        editor.apply()
+    }
+
+    private fun clearLoginDetails() {
+        val editor = sharedPreferences.edit()
+        editor.remove("rememberMe")
+        editor.remove("email")
+        editor.remove("password")
+        editor.apply()
     }
 
     private fun navigateToHome() {
-    val intent = Intent(this, MainActivity::class.java)
-    startActivity(intent)
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

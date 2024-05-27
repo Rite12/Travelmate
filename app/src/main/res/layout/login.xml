@@ -129,7 +129,7 @@
         android:fontFamily="@font/poppins"
         android:text="OR"
         android:textColor="@android:color/white"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -176,17 +176,21 @@
         android:layout_marginTop="34dp"
         android:layout_marginEnd="160dp"
         android:fontFamily="@font/poppins"
-        android:text="Don't have an Account?"
+        android:text="Don't have an Account ?"
         android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/textview3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="25dp"
         android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="232dp"
         android:layout_marginTop="34dp"
-        android:layout_marginEnd="78dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="80dp"
         android:fontFamily="@font/poppins"
         android:text="create account"
         android:textColor="@android:color/holo_orange_light" />
