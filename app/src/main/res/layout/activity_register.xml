@@ -23,7 +23,7 @@
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="22dp"
         android:fontFamily="@font/boldc"
         android:shadowDx="1"
@@ -66,8 +66,8 @@
         android:textSize="13.5sp" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:id="@+id/Name"
+        android:layout_width="336dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
@@ -87,10 +87,10 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/EmailEditText"
-        android:layout_width="wrap_content"
+        android:id="@+id/Email"
+        android:layout_width="336dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/Name"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
@@ -107,10 +107,10 @@
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/PhoneEditText"
-        android:layout_width="wrap_content"
+        android:id="@+id/Phone"
+        android:layout_width="336dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/EmailEditText"
+        android:layout_below="@id/Email"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
@@ -127,10 +127,10 @@
         android:textColorHint="@color/black" />
 
     <EditText
-        android:id="@+id/PasswordEditText"
-        android:layout_width="wrap_content"
+        android:id="@+id/Password"
+        android:layout_width="336dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/PhoneEditText"
+        android:layout_below="@id/Phone"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
@@ -149,7 +149,7 @@
         android:id="@+id/terms"
         android:layout_width="264dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/PasswordEditText"
+        android:layout_below="@id/Password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/boldp"
@@ -159,8 +159,8 @@
 
     <Button
         android:id="@+id/daftar"
-        android:layout_width="216dp"
-        android:layout_height="48dp"
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/terms"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
@@ -168,9 +168,9 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/rounded"
         android:backgroundTint="@color/Oranges"
-        android:fontFamily="@font/poppins"
-        android:textColor="@color/white"
-        android:text="Sign Up" />
+        android:fontFamily="@font/boldp"
+        android:text="Sign Up"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/textView"

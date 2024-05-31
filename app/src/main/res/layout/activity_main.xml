@@ -9,32 +9,36 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
-        android:src="@drawable/mountain"
-        android:contentDescription="@string/app_name" />
+        android:src="@drawable/background" />
 
     <TextView
         android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="0dp"
+        android:fontFamily="@font/boldc"
+        android:gravity="center"
         android:text="TRAVELMATE"
-        android:textSize="40sp"
         android:textColor="@android:color/black"
-        android:fontFamily="@font/cantarell" />
+        android:textSize="51sp" />
 
     <TextView
         android:id="@+id/subtitleTextView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/titleTextView"
+        android:layout_height="44dp"
+        android:layout_below="@+id/titleTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/robotor"
+        android:gravity="center"
         android:text="Teman Setia Di Setiap Perjalananmu!"
-        android:textSize="20sp"
         android:textColor="@android:color/black"
-        android:fontFamily="@font/poppins" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/versionTextView"
