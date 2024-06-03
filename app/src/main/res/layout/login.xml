@@ -123,7 +123,7 @@
         android:background="@drawable/rounded"
         android:backgroundTint="@color/Oranges"
         android:fontFamily="@font/boldp"
-        android:text="Log In"
+        android:text="LogIn"
         android:textColor="@android:color/white"
         tools:ignore="NotSibling" />
 
