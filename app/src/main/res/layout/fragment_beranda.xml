@@ -279,9 +279,10 @@
                     android:layout_marginBottom="8dp" />
 
                 <ImageView
+                    android:id="@+id/promo_image"
                     android:layout_width="match_parent"
                     android:layout_height="192dp"
-                    android:contentDescription="TODO"
+                    android:clickable="true"
                     android:src="@drawable/promo_image" />
             </LinearLayout>
         </LinearLayout>

@@ -1,21 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:theme="@style/ToolbarTheme"
+        app:subtitleTextColor="@color/black"
+        app:title="PROMO">
+
+        <ImageView
+            android:id="@+id/ic_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingStart="15dp"
+            android:src="@drawable/ic_map" />
+        <ImageView
+            android:id="@+id/ic_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingStart="15dp"
+            android:src="@drawable/heart" />
+        <ImageView
+            android:id="@+id/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_search" />
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/tv_promo_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
         android:layout_margin="16dp"
         android:text="Promo Menarik Buat Kamu"
         android:textSize="16sp"
         android:textStyle="bold" />
 
     <RelativeLayout
-        android:id="@+id/ll_promo_categories"
+        android:id="@+id/btnview"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/tv_promo_title"
         android:layout_marginTop="-6dp"
         android:layout_marginBottom="8dp"
@@ -93,7 +130,7 @@
         android:id="@+id/img_promo_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ll_promo_categories"
+        android:layout_below="@id/btnview"
         android:layout_margin="16dp"
         android:src="@drawable/promo_image" />
 
