@@ -14,4 +14,12 @@
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <!-- Bottom Navigation Bar -->
+    <style name="BottomNavTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="itemIconTint">@color/black</item>
+        <item name="itemTextColor">@color/black</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
 </resources>

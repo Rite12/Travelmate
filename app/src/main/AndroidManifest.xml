@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.travelmate">
+    package="com.example.travelmate" >
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat">
+        android:theme="@style/Theme.AppCompat" >
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".ui.theme.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.FullScreen">
+            android:theme="@style/Theme.FullScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,9 +34,12 @@
             android:theme="@style/Theme.FullScreen" />
         <activity
             android:name=".ui.theme.LoginActivity"
-            android:theme="@style/Theme.FullScreen"/>
+            android:theme="@style/Theme.FullScreen" />
         <activity
             android:name=".ui.theme.RegisterActivity"
+            android:theme="@style/Theme.FullScreen" />
+        <activity
+            android:name=".ui.theme.homeActivity"
             android:theme="@style/Theme.FullScreen" />
     </application>
 

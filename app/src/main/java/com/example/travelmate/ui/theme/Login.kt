@@ -1,9 +1,7 @@
 package com.example.travelmate.ui.theme
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -24,7 +22,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var googleLoginButton: Button
     private lateinit var facebookLoginButton: Button
     private lateinit var appleLoginButton: Button
-    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var auth: FirebaseAuth
 
 
@@ -37,6 +34,10 @@ class LoginActivity : AppCompatActivity() {
         passwordEditText = findViewById(R.id.passwordEditText)
         rememberMeCheckBox = findViewById(R.id.rememberMeCheckBox)
         loginButton = findViewById(R.id.loginButton)
+        googleLoginButton = findViewById(R.id.googleLoginButton)
+        facebookLoginButton = findViewById(R.id.facebookLoginButton)
+        appleLoginButton = findViewById(R.id.appleLoginButton)
+
         auth = FirebaseAuth.getInstance()
 
 
@@ -72,6 +73,8 @@ class LoginActivity : AppCompatActivity() {
                     val user = auth.currentUser
                     Toast.makeText(baseContext, "Login Berhasil: ${user?.email}", Toast.LENGTH_SHORT).show()
                     // Navigate to the next activity or update the UI
+                    val intent = Intent(this, HomepageActivity::class.java)
+                    startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
                     Toast.makeText(baseContext, "Login gagal: ${task.exception?.message}", Toast.LENGTH_SHORT).show()

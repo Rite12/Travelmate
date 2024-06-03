@@ -1,0 +1,291 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.theme.HomepageActivity">
+
+    <!-- Scroll view layout -->
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Search bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/profilePicture"
+                    android:layout_width="28dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/roundedprofile"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kucing" />
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded"
+                    android:drawableStart="@drawable/ic_search"
+                    android:hint="Cari wisata"
+                    android:paddingRight="15dp" />
+
+                <ImageView
+                    android:id="@+id/textView8"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/heart"/>
+
+                <ImageView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:background="@drawable/baseline_logout_24" />
+            </LinearLayout>
+
+            <!-- Main image -->
+            <ImageView
+                android:id="@+id/main_image"
+                android:layout_width="match_parent"
+                android:layout_height="217dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/kujang" />
+
+            <!-- Section header -->
+            <TextView
+                android:id="@+id/section_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Destinasi Wisata"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="2dp" />
+
+            <TextView
+                android:id="@+id/section_sub_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular Pick"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Grid layout or other components -->
+            <!-- For simplicity, using LinearLayout to simulate the grid -->
+            <LinearLayout
+                android:id="@+id/grid_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/puncak_pass"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/puncak_pass"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:id="@+id/kebun_raya"
+                        android:layout_width="0dp"
+                        android:scaleType="centerCrop"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/kebun_raya" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/curug_bidadari"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="1"
+                        android:src="@drawable/curug_bidadari"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:id="@+id/taman_safari"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="1"
+                        android:src="@drawable/taman_safari"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- More content -->
+            <TextView
+                android:id="@+id/more_content_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                android:text="Jelajahi Sekarang"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Icons section -->
+
+            <!-- Promo section -->
+            <RelativeLayout
+                android:id="@+id/icons_section"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/wisata_alam"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_toStartOf="@+id/wisata_sejarah"
+                    android:src="@drawable/ic_wisata_alam" />
+
+                <ImageView
+                    android:id="@+id/wisata_sejarah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_toStartOf="@+id/wisata_kuliner"
+                    android:src="@drawable/ic_wisata_sejarah" />
+
+                <ImageView
+                    android:id="@+id/wisata_kuliner"
+                    android:layout_width="81dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="29dp"
+                    android:src="@drawable/ic_wisata_kuliner" />
+
+                <ImageView
+                    android:id="@+id/ic_penginapan"
+                    android:layout_width="82dp"
+                    android:layout_height="130dp"
+                    android:layout_below="@+id/wisata_alam"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_toStartOf="@+id/ic_souvenir"
+                    android:src="@drawable/ic_penginapan" />
+
+                <ImageView
+                    android:id="@+id/ic_transportasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="234dp"
+                    android:layout_below="@+id/wisata_kuliner"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="29dp"
+                    android:layout_marginBottom="11dp"
+                    android:src="@drawable/ic_transportasi" />
+
+                <ImageView
+                    android:id="@+id/ic_souvenir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="136dp"
+                    android:layout_below="@+id/wisata_sejarah"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="39dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_toStartOf="@+id/ic_transportasi"
+                    android:src="@drawable/ic_souvenir" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PROMO"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/boldp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Promo Menarik Buat Kamu"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="192dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/promo_image" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/Gray"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>
