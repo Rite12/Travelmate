@@ -1,13 +1,15 @@
-package com.example.myapp
+package com.example.travelmate
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.example.travelmate.R
+import com.example.travelmate.ui.theme.LoginActivity
 
 class HomeFragment : Fragment() {
     override fun onCreateView(
@@ -22,10 +24,16 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val promoBtn: ImageView = view.findViewById(R.id.promo_image)
+        val logoutBtn: ImageView = view.findViewById(R.id.Logout)
 
         promoBtn.setOnClickListener {
             val promoFragment = PromoFragment()
             replaceFragment(promoFragment)
+        }
+        logoutBtn.setOnClickListener{
+            val intent = Intent (activity,LoginActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(activity, "Logout Berhasil", Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -36,4 +44,5 @@ class HomeFragment : Fragment() {
         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
         .commit()
         }
+
 }

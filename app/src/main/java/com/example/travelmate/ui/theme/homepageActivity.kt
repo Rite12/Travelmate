@@ -1,14 +1,13 @@
 package com.example.travelmate.ui.theme
 
 import AccountFragment
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.travelmate.R
 import com.example.myapp.DestinationFragment
-import com.example.myapp.HomeFragment
-import com.example.myapp.PromoFragment
+import com.example.travelmate.HomeFragment
+import com.example.travelmate.PromoFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
