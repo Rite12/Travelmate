@@ -9,18 +9,18 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 
-class PromoFragment : Fragment() {
+class WisataKulinerFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_promo, container, false)
+        return inflater.inflate(R.layout.fragment_wisata_kuliner, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         val SemuaTextView: TextView = view.findViewById<TextView>(R.id.semua)
         SemuaTextView.setOnClickListener {
@@ -43,7 +43,6 @@ class PromoFragment : Fragment() {
             replaceFragment(wisataKulinerFragment)
         }
     }
-
     private fun replaceFragment(fragment: Fragment) {
         parentFragmentManager.beginTransaction()
             .replace(R.id.fragment_container,fragment)

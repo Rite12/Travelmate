@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -34,6 +35,21 @@ class HomeFragment : Fragment() {
             val intent = Intent (activity,LoginActivity::class.java)
             startActivity(intent)
             Toast.makeText(activity, "Logout Berhasil", Toast.LENGTH_SHORT).show()
+        }
+        val wisataAlam: ImageView = view.findViewById<ImageView>(R.id.wisata_alam)
+        wisataAlam.setOnClickListener {
+            val wisataAlamFragment = WisataAlamFragment()
+            replaceFragment(wisataAlamFragment)
+        }
+        val WisataKuliner: ImageView = view.findViewById<ImageView>(R.id.wisata_kuliner)
+        WisataKuliner.setOnClickListener {
+            val wisataKulinerFragment = WisataKulinerFragment()
+            replaceFragment(wisataKulinerFragment)
+        }
+        val wisataSejarah: ImageView = view.findViewById<ImageView>(R.id.wisata_sejarah)
+        wisataSejarah.setOnClickListener {
+            val wisataSejarahFragment = WisataSejarahFragment()
+            replaceFragment(wisataSejarahFragment)
         }
 
 

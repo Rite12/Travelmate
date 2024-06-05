@@ -27,13 +27,28 @@ class DestinationFragment : Fragment() {
 
         val SemuaTextView: TextView = view.findViewById<TextView>(R.id.semua)
         SemuaTextView.setOnClickListener {
-            val homeFragment = HomeFragment()
-            replaceFragment(homeFragment)
+            val destinationFragment = DestinationFragment()
+            replaceFragment(destinationFragment)
         }
         val geoparkciletuhImageView : ImageView = view.findViewById<ImageView>(R.id.Destination5)
         geoparkciletuhImageView.setOnClickListener {
             val geoparkciletuhFragment = GeoparkCiletuh()
             replaceFragment(geoparkciletuhFragment)
+        }
+        val WisataAlam: TextView = view.findViewById<TextView>(R.id.wisata_alam)
+        WisataAlam.setOnClickListener {
+            val wisataAlamFragment = WisataAlamFragment()
+            replaceFragment(wisataAlamFragment)
+        }
+        val WisataSejarah: TextView = view.findViewById<TextView>(R.id.wisata_sejarah)
+        WisataSejarah.setOnClickListener {
+            val wisataSejarahFragment = WisataSejarahFragment()
+            replaceFragment(wisataSejarahFragment)
+        }
+        val WisataKuliner: TextView = view.findViewById<TextView>(R.id.wisata_kuliner)
+        WisataKuliner.setOnClickListener {
+            val wisataKulinerFragment = WisataKulinerFragment()
+            replaceFragment(wisataKulinerFragment)
         }
     }
     private fun replaceFragment(fragment: Fragment) {
