@@ -36,6 +36,8 @@ class HomeFragment : Fragment() {
             Toast.makeText(activity, "Logout Berhasil", Toast.LENGTH_SHORT).show()
         }
 
+
+
     }
     private fun replaceFragment(fragment: Fragment) {
         parentFragmentManager.beginTransaction()

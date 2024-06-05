@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.travelmate.R
-import com.example.myapp.DestinationFragment
+import com.example.travelmate.DestinationFragment
 import com.example.travelmate.HomeFragment
 import com.example.travelmate.PromoFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView

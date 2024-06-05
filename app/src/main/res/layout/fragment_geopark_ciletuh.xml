@@ -1,0 +1,176 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!-- Header Image -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!-- Description Text -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/ic_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingStart="15dp"
+            android:src="@drawable/ic_map"
+            app:tint="@color/Icon" />
+
+        <ImageView
+            android:id="@+id/ic_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingStart="15dp"
+            android:src="@drawable/heart"
+            app:tint="@color/Icon" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/toolbar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/geopark_placeholder" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_image"
+        android:padding="7dp"
+        android:fontFamily="@font/boldc"
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        android:text="Geopark Ciletuh"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/Categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/robotor"
+        android:layout_marginStart="10dp"
+        android:text="Wisata Alam"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Categories"
+        android:gravity="start"
+        android:textSize="13dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:text="Geopark Ciletuh Sukabumi: Surga Tersembunyi di Jawa Barat Geopark Ciletuh di Sukabumi, Jawa Barat, adalah sebuah kawasan wisata alam yang memukau dengan berbagai pesona alamnya. Diakui sebagai UNESCO Global Geopark pada tahun 2018, Geopark Ciletuh menawarkan pemandangan yang luar biasa, mulai dari pantai yang indah, air terjun yang menawan, hingga bukit dan pegunungan yang hijau."
+        android:fontFamily="@font/inter"/>
+
+    <!-- Phone -->
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/context"
+        android:fontFamily="@font/robotor"
+        android:padding="5dp"
+        android:text="Telepon:\n085759659338" />
+
+    <!-- Instagram -->
+    <TextView
+        android:id="@+id/instagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone"
+        android:padding="5dp"
+        android:fontFamily="@font/robotor"
+        android:text="Instagram: \n@geopark_ciletuh_sukabumi_" />
+
+    <!-- Gallery -->
+    <LinearLayout
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instagram"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/photo1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            android:src="@drawable/geopark_ciletuh_placeholder_1" />
+
+        <ImageView
+            android:id="@+id/photo2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/geopark_ciletuh_placeholder_2"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/photo3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:padding="4dp"
+            android:src="@drawable/geopark_ciletuh_placeholder_3"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/map_image"
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:layout_below="@id/gallery"
+            android:layout_marginTop="-1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/coordinates_ciletuh" />
+
+        <Button
+            android:id="@+id/direction_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gallery"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="114dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="99dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_map"
+            android:padding="8dp"
+            android:text="Arahkan ke Lokasi" />
+    </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>

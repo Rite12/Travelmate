@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:layout_above="@id/bottom_navigation_bar">
+        android:layout_above="@id/bottom_navigation_bar"
+        tools:ignore="NotSibling">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,13 +33,13 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="16dp">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/profilePicture"
                     android:layout_width="28dp"
                     android:layout_height="25dp"
                     android:layout_marginEnd="8dp"
                     android:scaleType="fitCenter"
-                    android:background="@drawable/roundedprofile"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners"
                     android:src="@drawable/kucing" />
 
                 <EditText
@@ -62,7 +63,8 @@
                     android:layout_marginEnd="8dp"
                     android:scaleType="fitCenter"
                     android:clickable="true"
-                    android:src="@drawable/heart" />
+                    android:src="@drawable/heart"
+                    app:tint="@color/Icon" />
 
                 <ImageView
                     android:id="@+id/Logout"
@@ -70,7 +72,8 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:layout_marginEnd="8dp"
-                    android:src="@drawable/baseline_logout_24"/>
+                    android:src="@drawable/baseline_logout_24"
+                    app:tint="@color/Icon" />
             </LinearLayout>
 
             <!-- Main image -->
@@ -79,7 +82,7 @@
 
             <ImageView
                 android:id="@+id/main_image"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="217dp"
                 android:layout_marginBottom="8dp"
                 android:src="@drawable/kujang" />
@@ -118,20 +121,21 @@
                     android:orientation="horizontal"
                     android:layout_marginBottom="8dp">
 
-                    <ImageView
-
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/puncak_pass"
                         android:layout_width="0dp"
                         android:layout_height="100dp"
                         android:layout_weight="1"
                         android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/roundedimage"
                         android:src="@drawable/puncak_pass"
                         android:layout_marginEnd="8dp"/>
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/kebun_raya"
                         android:layout_width="0dp"
                         android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/roundedimage"
                         android:layout_height="100dp"
                         android:layout_weight="1"
                         android:src="@drawable/kebun_raya" />
@@ -143,20 +147,22 @@
                     android:orientation="horizontal"
                     android:layout_marginBottom="8dp">
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/curug_bidadari"
                         android:layout_width="0dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:layout_weight="1"
+                        app:shapeAppearanceOverlay="@style/roundedimage"
                         android:src="@drawable/curug_bidadari"
                         android:layout_marginEnd="8dp" />
 
-                    <ImageView
+                    <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/taman_safari"
                         android:layout_width="0dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/roundedimage"
                         android:layout_weight="1"
                         android:src="@drawable/taman_safari"/>
                 </LinearLayout>

@@ -20,20 +20,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:paddingStart="15dp"
-            android:src="@drawable/ic_map" />
+            android:src="@drawable/ic_map"
+            app:tint="@color/Icon"/>
         <ImageView
             android:id="@+id/ic_heart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:paddingStart="15dp"
-            android:src="@drawable/heart" />
+            android:src="@drawable/heart"
+            app:tint="@color/Icon"/>
         <ImageView
             android:id="@+id/ic_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:src="@drawable/ic_search" />
+            android:src="@drawable/ic_search"
+            app:tint="@color/Icon"/>
 
 
     </androidx.appcompat.widget.Toolbar>
@@ -50,7 +53,7 @@
 
     <RelativeLayout
         android:id="@+id/btnview"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_promo_title"
         android:layout_marginTop="-6dp"
@@ -71,6 +74,8 @@
             android:background="@drawable/rounded"
             android:fontFamily="@font/poppins"
             android:gravity="center"
+            android:backgroundTint="@color/lightGray"
+            android:textColor="@color/black"
             android:clickable="true"
             android:padding="5dp"
             android:paddingRight="15dp"
@@ -88,6 +93,8 @@
             android:layout_toStartOf="@+id/wisata_sejarah"
             android:background="@drawable/rounded"
             android:fontFamily="@font/poppins"
+            android:backgroundTint="@color/lightGray"
+            android:textColor="@color/black"
             android:gravity="center"
             android:padding="5dp"
             android:text="Wisata Alam"
@@ -103,6 +110,8 @@
             android:layout_marginEnd="5dp"
             android:layout_toStartOf="@+id/wisata_kuliner"
             android:background="@drawable/rounded"
+            android:backgroundTint="@color/lightGray"
+            android:textColor="@color/black"
             android:fontFamily="@font/poppins"
             android:gravity="center"
             android:padding="5dp"
@@ -120,6 +129,8 @@
             android:layout_marginEnd="6dp"
             android:background="@drawable/rounded"
             android:fontFamily="@font/poppins"
+            android:backgroundTint="@color/lightGray"
+            android:textColor="@color/black"
             android:gravity="center"
             android:padding="5dp"
             android:paddingRight="15dp"
