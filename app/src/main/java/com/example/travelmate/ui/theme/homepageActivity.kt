@@ -1,6 +1,6 @@
 package com.example.travelmate.ui.theme
 
-import AccountFragment
+import com.example.travelmate.AccountFragment
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment

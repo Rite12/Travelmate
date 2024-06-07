@@ -63,7 +63,7 @@
             android:padding="5dp"
             android:paddingRight="15dp"
             android:text="Semua"
-            android:textSize="10dp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/wisata_alam"
@@ -82,7 +82,7 @@
             android:padding="5dp"
             android:text="Wisata Alam"
             android:textColor="@color/black"
-            android:textSize="10dp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@id/wisata_sejarah"
@@ -101,7 +101,7 @@
             android:backgroundTint="@color/lightGray"
             android:clickable="true"
             android:text="Wisata Sejarah"
-            android:textSize="10dp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/wisata_kuliner"
@@ -121,7 +121,7 @@
             android:backgroundTint="@color/lightGray"
             android:paddingRight="15dp"
             android:text="Wisata Kuliner"
-            android:textSize="10dp" />
+            android:textSize="10sp" />
     </RelativeLayout>
 
 </RelativeLayout>

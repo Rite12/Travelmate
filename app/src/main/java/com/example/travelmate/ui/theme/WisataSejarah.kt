@@ -8,9 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.example.travelmate.GeoparkCiletuh
-import com.example.travelmate.HomeFragment
-import com.example.travelmate.R
 
 class WisataSejarahFragment : Fragment() {
 
@@ -23,7 +20,6 @@ class WisataSejarahFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         val SemuaTextView: TextView = view.findViewById<TextView>(R.id.semua)
         SemuaTextView.setOnClickListener {
@@ -50,7 +46,7 @@ class WisataSejarahFragment : Fragment() {
         parentFragmentManager.beginTransaction()
             .replace(R.id.fragment_container,fragment)
             .addToBackStack(null)
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
             .commit()
     }
 }

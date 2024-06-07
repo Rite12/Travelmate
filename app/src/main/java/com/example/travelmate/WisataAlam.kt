@@ -53,7 +53,7 @@ class WisataAlamFragment : Fragment() {
         parentFragmentManager.beginTransaction()
             .replace(R.id.fragment_container,fragment)
             .addToBackStack(null)
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
             .commit()
     }
 }

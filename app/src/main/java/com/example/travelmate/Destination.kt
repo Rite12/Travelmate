@@ -8,9 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.example.travelmate.GeoparkCiletuh
-import com.example.travelmate.HomeFragment
-import com.example.travelmate.R
 
 class DestinationFragment : Fragment() {
 
@@ -50,12 +47,17 @@ class DestinationFragment : Fragment() {
             val wisataKulinerFragment = WisataKulinerFragment()
             replaceFragment(wisataKulinerFragment)
         }
+        val kebunRaya: ImageView = view.findViewById<ImageView>(R.id.Destination2)
+        kebunRaya.setOnClickListener {
+            val kebunRayaFragment = KebunRayaFragment()
+            replaceFragment(kebunRayaFragment)
+        }
     }
     private fun replaceFragment(fragment: Fragment) {
         parentFragmentManager.beginTransaction()
             .replace(R.id.fragment_container,fragment)
             .addToBackStack(null)
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
             .commit()
     }
 }

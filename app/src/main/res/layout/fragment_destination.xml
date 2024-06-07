@@ -133,6 +133,8 @@
         app:subtitleTextColor="@color/black"
         app:title="Destination">
 
+
+
         <ImageView
             android:id="@+id/ic_map"
             android:layout_width="wrap_content"
@@ -158,7 +160,11 @@
             app:tint="@color/Icon" />
 
 
+
+
+
     </androidx.appcompat.widget.Toolbar>
+
 
     <RelativeLayout
         android:id="@+id/btnview"
@@ -247,6 +253,7 @@
             android:paddingRight="15dp"
             android:text="Wisata Kuliner"
             android:textSize="10dp" />
+
     </RelativeLayout>
 
 </RelativeLayout>

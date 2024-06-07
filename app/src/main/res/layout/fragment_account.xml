@@ -1,13 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <View
+        android:id="@+id/opacityFilter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.35">
+        </View>
 
-</FrameLayout>
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/tvAboutUs"
+        android:layout_marginVertical="16dp"
+        android:layout_marginBottom="218dp"
+        android:background="@android:color/darker_gray" />
+
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/tvFavoriteDestination"
+        android:layout_marginVertical="16dp"
+        android:layout_marginBottom="218dp"
+        android:background="@android:color/darker_gray" />
+
+    <View
+        android:id="@+id/view_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/tvKritikDanSaran"
+        android:layout_marginVertical="16dp"
+        android:layout_marginBottom="218dp"
+        android:background="@android:color/darker_gray" />
+
+    <View
+        android:id="@+id/view_5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/tvLogOut"
+        android:layout_marginVertical="16dp"
+        android:layout_marginBottom="218dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:subtitleTextColor="@color/black"
+        android:background="@color/white"
+        app:title="ACCOUNT">
+
+    <ImageView
+        android:id="@+id/ic_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingStart="15dp"
+        android:src="@drawable/ic_map"
+        app:tint="@color/Icon"/>
+
+    <ImageView
+        android:id="@+id/ic_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingStart="15dp"
+        android:src="@drawable/heart"
+        app:tint="@color/Icon"/>
+    <ImageView
+        android:id="@+id/ic_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_search"
+        app:tint="@color/Icon"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView7"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/profilePicture"
+            android:text="08123456789"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kucing"
+            app:shapeAppearanceOverlay="@style/Circular" />
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/profilePicture"
+            android:fontFamily="@font/robotor"
+            android:text="Fajar Kurniawan"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Name"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/profilePicture"
+            android:text="Fajarkur21@gmail.com"
+            android:fontFamily="@font/robotor"
+
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/edit_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_above="@+id/view"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="21dp"
+            android:src="@drawable/ic_edit"
+            app:tint="@color/Gray" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/profilePicture"
+            android:layout_marginVertical="16dp"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvAboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="16dp"
+        android:text="About Us"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvFavoriteDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAboutUs"
+        android:padding="16dp"
+        android:text="Favorite Destination"
+        android:textSize="16sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvKritikDanSaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFavoriteDestination"
+        android:padding="16dp"
+        android:text="Kritik Dan Saran"
+        android:textSize="16sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvKritikDanSaran"
+        android:padding="16dp"
+        android:text="Log Out"
+        android:textSize="16sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginBottom="8dp" />
+</RelativeLayout>
