@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.travelmate.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -19,6 +20,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var PasswordEditText:EditText
     private lateinit var daftar:Button
     private lateinit var auth: FirebaseAuth
+    private lateinit var db : FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,7 @@ class RegisterActivity : AppCompatActivity() {
         PasswordEditText = findViewById(R.id.Password)
         daftar = findViewById(R.id.daftar)
         auth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
 
         val textView6 = findViewById<TextView>(R.id.textView6)
         textView6.setOnClickListener{
@@ -44,29 +47,36 @@ class RegisterActivity : AppCompatActivity() {
     private fun registerUser() {
         val email = EmailEditText.text.toString().trim()
         val password = PasswordEditText.text.toString().trim()
+        val name = NameEditText.text.toString().trim()
+        val phone = PhoneEditText.text.toString().trim()
 
-        if (email.isEmpty()) {
-            Toast.makeText(this, "Masukkan email", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        if (password.isEmpty()) {
-            Toast.makeText(this, "Masukkan password", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Daftar Berhasi
-                    Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this,LoginActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    //Daftar Gagal
-                    Toast.makeText(this, "Registrasi Gagal: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+        if (email.isNotBlank() && password.isNotBlank() && name.isNotBlank() && phone.isNotBlank()) {
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val user = hashMapOf(
+                            "name" to name,
+                            "email" to email,
+                            "phone" to phone
+                        )
+                        db.collection("users").document(auth.currentUser!!.uid)
+                            .set(user)
+                            .addOnSuccessListener {
+                                Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this, LoginActivity::class.java)
+                                startActivity(intent)
+                                finish()
+                            }
+                            .addOnFailureListener {
+                                Toast.makeText(this, "Gagal Menyimpan data", Toast.LENGTH_SHORT).show()
+                            }
+                    } else {
+                        Toast.makeText(this, "Registrasi Gagal.", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
+        } else {
+            Toast.makeText(this, "Harus Diisi semuanya.", Toast.LENGTH_SHORT).show()
+        }
     }
 }
+

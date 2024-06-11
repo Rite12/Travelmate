@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.travelmate.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class LoginActivity : AppCompatActivity() {
@@ -25,6 +26,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var appleLoginButton: Button
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var auth: FirebaseAuth
+    private lateinit var db : FirebaseFirestore
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -37,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
         rememberMeCheckBox = findViewById(R.id.rememberMeCheckBox)
         loginButton = findViewById(R.id.loginButton)
         auth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
 
 
         val registerTextView = findViewById<TextView>(R.id.textview3)
