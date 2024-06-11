@@ -35,6 +35,12 @@ class HomeFragment : Fragment() {
             startActivity(intent)
             Toast.makeText(activity, "Logout Berhasil", Toast.LENGTH_SHORT).show()
         }
+
+        val tuguKujang: ImageView = view.findViewById<ImageView>(R.id.main_image)
+        tuguKujang.setOnClickListener{
+            val tuguKujangFragment = TuguKujang()
+            replaceFragment(tuguKujangFragment)
+        }
         val wisataAlam: ImageView = view.findViewById<ImageView>(R.id.wisata_alam)
         wisataAlam.setOnClickListener {
             val wisataAlamFragment = WisataAlamFragment()

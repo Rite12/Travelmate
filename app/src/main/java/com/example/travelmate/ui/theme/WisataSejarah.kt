@@ -26,6 +26,11 @@ class WisataSejarahFragment : Fragment() {
             val destinationFragment = DestinationFragment()
             replaceFragment(destinationFragment)
         }
+        val TuguKujangBogor: ImageView = view.findViewById<ImageView>(R.id.Destination4)
+        TuguKujangBogor.setOnClickListener {
+            val TuguKujangFragment = TuguKujang()
+            replaceFragment(TuguKujangFragment)
+        }
         val WisataAlam: TextView = view.findViewById<TextView>(R.id.wisata_alam)
         WisataAlam.setOnClickListener {
             val wisataAlamFragment = WisataAlamFragment()

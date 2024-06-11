@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:src="@drawable/ic_map"
             app:tint="@color/Icon"/>
         <ImageView
