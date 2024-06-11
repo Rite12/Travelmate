@@ -74,6 +74,7 @@ dependencies {
     implementation(libs.androidx.cardview)
     implementation(libs.play.services.maps)
     implementation(libs.firebase.database)
+    implementation(libs.glide)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

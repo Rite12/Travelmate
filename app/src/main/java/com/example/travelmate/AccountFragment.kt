@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -29,6 +30,11 @@ class AccountFragment : Fragment() {
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
             Toast.makeText(activity, "Logout Berhasil", Toast.LENGTH_SHORT).show()
+        }
+        val MapListiew: ImageView = view.findViewById<ImageView>(R.id.ic_map)
+        MapListiew.setOnClickListener {
+            val MapListFragment = MapList()
+            replaceFragment(MapListFragment)
         }
     }
 

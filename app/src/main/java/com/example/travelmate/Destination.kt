@@ -21,6 +21,12 @@ class DestinationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val MapListiew: ImageView = view.findViewById<ImageView>(R.id.ic_map)
+        MapListiew.setOnClickListener {
+            val MapListFragment = MapList()
+            replaceFragment(MapListFragment)
+        }
+
 
         val SemuaTextView: TextView = view.findViewById<TextView>(R.id.semua)
         SemuaTextView.setOnClickListener {
