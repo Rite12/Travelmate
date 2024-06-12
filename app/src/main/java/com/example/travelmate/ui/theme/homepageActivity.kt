@@ -1,13 +1,13 @@
 package com.example.travelmate.ui.theme
 
-import com.example.travelmate.AccountFragment
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.travelmate.R
+import com.example.travelmate.AccountFragment
 import com.example.travelmate.DestinationFragment
 import com.example.travelmate.HomeFragment
 import com.example.travelmate.PromoFragment
+import com.example.travelmate.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -25,7 +25,6 @@ class HomepageActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    // Reload MainActivity to simulate navigating back to home
                     replaceFragment(HomeFragment())
                     true
                 }

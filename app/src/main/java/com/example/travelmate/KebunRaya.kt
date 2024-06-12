@@ -17,7 +17,6 @@ class KebunRayaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_kebun_raya, container, false)
     }
 
@@ -42,7 +41,7 @@ class KebunRayaFragment : Fragment() {
         }
         val direction = view.findViewById<View>(R.id.direction_button)
         direction.setOnClickListener {
-            val gmmIntentUri = Uri.parse("geo:-6.598615,106.799317?q=-6.598615,106.799317?(Kebun Raya Bogor)")
+            val gmmIntentUri = Uri.parse("geo:-6.598615,106.799317?q=-6.598615,106.799317(Kebun Raya Bogor)")
             val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
             mapIntent.setPackage("com.google.android.apps.maps")
             startActivity(mapIntent)

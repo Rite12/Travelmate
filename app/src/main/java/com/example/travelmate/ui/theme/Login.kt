@@ -71,14 +71,11 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success
                     val user = auth.currentUser
                     Toast.makeText(baseContext, "Login Berhasil: ${user?.email}", Toast.LENGTH_SHORT).show()
-                    // Navigate to the next activity or update the UI
                     val intent = Intent(this, HomepageActivity::class.java)
                     startActivity(intent)
                 } else {
-                    // If sign in fails, display a message to the user.
                     Toast.makeText(baseContext, "Login gagal: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
