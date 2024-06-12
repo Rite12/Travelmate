@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.example.travelmate.ui.theme.AboutUsFragment
 import com.example.travelmate.ui.theme.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -56,6 +57,12 @@ class AccountFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val aboutUs : TextView = view.findViewById(R.id.tvAboutUs)
+        aboutUs.setOnClickListener {
+            val aboutUsFragment = AboutUsFragment()
+            replaceFragment(aboutUsFragment)
+        }
 
         val logoutTxt: TextView = view.findViewById(R.id.tvLogOut)
         logoutTxt.setOnClickListener {

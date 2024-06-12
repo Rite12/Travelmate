@@ -1,12 +1,13 @@
 package com.example.travelmate
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import android.net.Uri
 import androidx.fragment.app.FragmentTransaction
 import com.example.travelmate.ui.theme.HomepageActivity
 
@@ -29,6 +30,12 @@ class GeoparkCiletuh : Fragment() {
         (activity as? HomepageActivity)?.supportActionBar?.setDisplayShowHomeEnabled(true)
         (activity as? HomepageActivity)?.supportActionBar?.setHomeAsUpIndicator(R.drawable.arrow_back)
         (activity as? HomepageActivity)?.supportActionBar?.title = "Geopark Ciletuh"
+
+        val MapListiew: ImageView = view.findViewById<ImageView>(R.id.ic_map)
+        MapListiew.setOnClickListener {
+            val MapListFragment = MapList()
+            replaceFragment(MapListFragment)
+        }
 
         val toolbar = view.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         toolbar.setNavigationOnClickListener {

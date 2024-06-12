@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    android:layout_weight="1"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        app:title="ABOUT US"
+        android:elevation="4dp"
+        app:titleTextColor="@color/black"
+        app:subtitleTextAppearance="@font/cantarell"/>
+
+
+    <TextView
+        android:id="@id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:fontFamily="@font/cantarell"
+        android:textColor="@color/black"
+        android:text="Inspiring People To Explore More With Us"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title1"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/robotor"
+        android:gravity="center"
+        android:text="Pada TRAVELMATE kami bertujuan untuk mempermudahkan pengguna untuk berpegian kepada wisata-wisata terutama di area bogor dan sekitarnya"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>
